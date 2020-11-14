@@ -1,4 +1,9 @@
 # Housing_Price_prediction_model
+Thousands of houses are sold everyday. There are some questions every buyer asks himself like: What is the actual price that this house deserves?
+Am I paying a fair price?
+
+### I have Build a machine learning model to predict a house price based on Bangaluru Dataset.
+
 Dataset: https://www.kaggle.com/amitabhajoy/bengaluru-house-price-data
 
 This Dataset has 9 attributes.
