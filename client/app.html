@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banglore Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<!-- <div class="main_s"> -->
+	<div class="img"></div>
+	<div id="main">
+	<form class="form">
+		<h2>Area (Square Feet)</h2>
+		<input   class="area"  id="uiSqft" class="floatLabel" name="" value="1000">
+	</form>
+	<form class="form">
+		<h2>BHK</h2>
+		<input class="area"   id="uiBHK" class="floatLabel" name="" value="2">
+	</form>
+	<form class="form">
+		<h2>BathRoom</h2>
+		<input class="area"  id="uiBathrooms" class="floatLabel" name="" value="2">
+		<h2>Location</h2>
+		<div>
+	<select class="location" name="" id="uiLocations">
+		<option value="" disabled="disabled" selected="selected">Choose a Location</option>
+			<option>Electronic City</option>
+			<option>Rajaji Nagar</option>
+	</select>
+	</div>
+		<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+		<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+		</form>
+	</div>
+	<!-- <div id="parag" >
+		<h3 style="text-align:center;"> Estimate Price of House in Bangaluru</h3>
+	<p >Point In Consideration During Building of this Machine Learning Model</p>
+	<p style="font-size:25px;">
+	   1. Model is build from <a href='https://www.kaggle.com/amitabhajoy/bengaluru-house-price-data'> This_Dataset</a><br>
+	   2. Drop Columns of 'area_type','availability','society' and 'balcony'.<br>
+	   3. Drop NULL value row and row of size columns which are not in sqft.<br> 
+	   4. Location whose count is Less than equal to 10 are treated as 'other' Location.<br>
+	   5. Drop that rows whose total_sqft/BHK Less 300 . Assume it as a Threshold.<br>
+	   6. Drop that row in which Number of Bathroom is greater then number of BHK+2.
+	</p>
+	<table style="font-size:25px;" >
+		<tr>
+		  <th>Model</th>
+		  <th>Best_Score</th>
+		  <th>Best_Parameter</th>
+		</tr>
+		<tr>
+		  <td>Linear_Regression</td>
+		  <td>79%</td>
+		  <td>{'normalize': True}</td>
+		</tr>
+		<tr>
+		  <td>Lasso</td>
+		  <td>65%</td>
+		  <td>{'alpha': 1, 'selection': 'random'}</td>
+		</tr>
+		<tr>
+			<td>Ridge</td>
+			<td>76%</td>
+			<td>{'alpha': 1}</td>
+		</tr>
+		<tr>
+			<td>Descision Tree</td>
+			<td>66%</td>
+			<td> {'criterion': 'friedman_mse', 'splitter': 'best'}</td>
+		</tr>	
+		<tr>
+			<td>Random Forest Regressor</td>
+			<td>73%</td>
+			<td>{'n_estimators': 25}</td>
+		</tr> 
+		<tr>
+			<td>XGBoost</td>
+			<td>76%</td>
+			<td>{'learning_rate': 1, 'n_estimators': 50}</td>
+		</tr>   
+		<tr>
+			<td>Support Vector Regressor</td>
+			<td>11%</td>
+			<td>default</td>
+		</tr>	    
+	  </table>
+
+	</div> -->
+<!-- </div> -->
+</body>
+</html>
